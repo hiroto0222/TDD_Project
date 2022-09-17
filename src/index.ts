@@ -1,7 +1,18 @@
 class PalindromeChecker {
+  private getReversedString(str: string): string {
+    return str.split('').reverse().join('');
+  }
+
+  private stripSpaces(str: string): string {
+    return str.split(' ').join('');
+  }
+
   isPalindrome(str: string): boolean {
-    const reversed = str.split('').reverse().join('');
-    return str.toLowerCase() === reversed.toLowerCase();
+    const reversed = this.getReversedString(str);
+    return (
+      this.stripSpaces(str).toLowerCase() ===
+      this.stripSpaces(reversed).toLowerCase()
+    );
   }
 }
 

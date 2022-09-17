@@ -22,4 +22,8 @@ describe('palindrome checker', () => {
   it('should detect palindrome regardless of casing', () => {
     expect(palindromeChecker.isPalindrome('Mom')).toBeTruthy();
   });
+
+  it('should detect phrase "Was It A Rat I Saw" as a palindrome', () => {
+    expect(palindromeChecker.isPalindrome('Was It A Rat I Saw')).toBeTruthy();
+  });
 });
